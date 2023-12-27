@@ -1,0 +1,185 @@
+UML includes the following nine diagrams:
+- Class diagram
+- Object diagram
+- Use case diagram
+- Sequence diagram
+- Collabration diagram
+- Activity diagram
+- Statechart diagram
+- Deployment diagram
+- Component diagram
+
+----------------------------------------------------------------
+
+Mdoule - 5
+
+___________________________________________________
+Concurrent Acativity:-
+* Parallesim 
+* Concurency
+* Scheduling 
+* Sorting Network
+* Measuring Concurrent's Effect
+* Chakkenges of Concurrency
+
+Parallelism:-
+Doing many things at the same time instead of sequentially 
+
+Parallel computing is a type of computational in which many calculations are carried out simultaneously, 
+oprtation on the principle that large problems can opten be divided into smaller ones, which are then solved at the same time.
+
+The term parallelism refers to techniques to programs faster by performing several computations the samr time.
+
+DATA Parallesim 
+    Same computation being performed on a collection of incepedent items 
+    EG. 
+            Read a,b
+            Pint a+b
+
+
+CONCURRENCY: 
+ 
+Concurency means multiple computations are happening at the same time.
+    - Multiple computers in a Network
+    - Multiple applications running on one computers
+    - Multiple processors in a computer.
+
+Concurrency is essential in modern programming;
+    - Websites must handle multiple simultaneous users
+    - Mobile apps need to do some of their processing on servers 
+    - GUI almost always required background woek tht does not interrupt the user.
+
+
+Here we have two models of Concurrent Programming:
+
+SHARED MEMORY
+ In the shared memoy, concurrent models intract by readeing and writing shared objects in memory.
+
+ -----------------------------------------------------------------------------------------------
+ SCHEDULING 
+ Process scheduling is a essential part of multiprogramming of operation sustem.Such operating system allow more than one process to be loaded 
+ into the executable memory at a time and the loaded process shares the CPU using time multiplexing.
+
+ Scheduling Criteria:
+ Scheduling criteria is also called as scheduling methodology.
+
+  CPU utilization: Keep the CPU as busy as possible. It ranges from 0 to 100%.
+
+  Throughput: It is the rate at which process are completed per unit of time.
+  
+  Turnaround time: This is the how long a process takes to execute a proces. it is calculated as the time gap between the submission of a process 
+  and its competion.
+
+  Waiting time: waiting time is the sum of time periods spent in waiting in the ready queue.
+
+  Response time: It is the time it takes to start responding from submisson time. It is calculated as the amount of time it takes from whem a request
+  was submitted until the first response is produced.
+
+  ...................................................................................................................................
+  CATEGORIES OF SCHEDULING:
+
+  Non-Preemptive: The resource cannot be taken from a process until the process complete execution. The switching of resources occurs when the runnig 
+  process terminates and moves to a waiting state.
+
+  Preemptive: The operation system allocates the resurces to a process for a fixed amount of time. During resource allocation, the process switches 
+  from running state to ready state or from waiting to ready state.
+
+  This switchih occurs as the CPU may give priority to other processes and replace the process with higher priority with the running process.
+  
+
+  PROCESS SCHEDULING QUEUES:
+
+    Job Queue: It keeps all the peocess in the system 
+
+    Ready Queue: It keeps a set of all processes residing in main memory, ready and waiting to execute. A new process is alwas put in this queue.
+
+    Device Queues: The processes which are blocked due to unavailablity of an I/O device constitute this queue.
+
+
+ ------------------------------------------------------------------------------------------------------
+
+ TWO-STATE PROCESS MODEL:
+
+ RUNNING 
+    When a new process is created, it enters into the system as in the running state 
+
+NOT RUNNING 
+    Process that are not running are kept in queue, waiting for their turn to execute.
+    
+    when a process is interrupted, that process is transferred in the waiting queue. If the process has completed or aborted, the process is discarded 
+
+    
+
+
+..................................................................................................................................................
+
+DEADLOCK:
+A deadlock is a situation in which two computer programs sharing the same resource are effectively preventing each other from accessing the resource.
+
+Program 1 requests resource A and receives it.
+Program 2 requests resource B and recieves it.
+Program 1 requests resource B and is queued up, pending the release of B.
+Program 2 requests resource A and is queued up, pending the release of A.
+
+
+A deadlock in OS is a situation in which more than one process is blocked because it is holding a resources and also requires some resource that is 
+acquired by some other process.
+
+Condition for a deadlock to arise are as follows:
+
+Mutual Exclusion:
+Only one process can use a resource at any given time i.e. the resources are non-sharable.
+
+Hold and wait:
+A process is holding at least one resorce at a time and is waithing to acquire other resources held by some other process.
+
+No Preemption:
+The resource can be released by a process voluntarily i.e. after executon of the process.
+
+Circular Wait:
+A set of processes are waiting for each other in a circular fashion 
+
+Advantage of Deadlock methodology
+
+No preemption is needed for deadlocks.
+It is a good method if the state of the resource can be saved and restored easily.
+It is good for activities that perform a single brust of activity.
+It does not need run-time computations because the program is solved in systme design.
+
+
+Disadvantage of Deadlock Method 
+
+The process must know the maximum resource of each type required to execute it .
+Preemptions are frequently encountered.
+It delays the process initiation.
+There are inherent pre-emption losses.
+It does not support incremental reequest of resources.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sorting Networks:-
+
+Sorting means arrange data/ elements either in ascending order/ descending order.
+
+Descending Order:
+- Searching for first highest
+                second 
+                third 
+                fourth
+
+
+Ascending Order:
+- searching for first lowest
+                second 
+                third 
+                fourth
+
+
+
+Ascending Order:
+
+if(a[i] > a[i+1])
+
+temp=a[i]
+a[i]=a[i+1]
+a[i+1]=temp

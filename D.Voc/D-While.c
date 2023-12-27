@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int i=1;
+ do
+ {
+     printf("%d \n ",i);
+ }
+  while (i>2);
+ { 
+     printf("i is not greater than 2");
+ }
+    return 0;
+}
