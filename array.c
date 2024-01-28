@@ -1,5 +1,5 @@
 #include<stdio.h>
-main()
+void main()
 {
     int a[5],i;
     printf("\n Enter tha array element \n");
@@ -12,7 +12,5 @@ main()
     {
         printf("\n a[%d]= %d",i,a[i]);
     }
-    
-
     
 }
