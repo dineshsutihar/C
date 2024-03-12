@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prime Number Checker</title>
+  </head>
+  <body>
+    <h1>Prime Number Checker</h1>
+    <input type="text" id="numInput" />
+    <button id="checkBtn">Check</button>
+    <p id="result"></p>
+    <script>
+      function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) return false;
+        }
+        return true;
+      }
+      const checkBtn = document.getElementById("checkBtn");
+      checkBtn.addEventListener("click", function () {
+        const numInput = document.getElementById("numInput").value;
+        const result = document.getElementById("result");
+        result.innerHTML += isPrime(numInput) ? `${numInput} is a Prime <br />` : `${numInput} is not a Prime <br />`;
+      });
+    </script>
+  </body>
+</html>
